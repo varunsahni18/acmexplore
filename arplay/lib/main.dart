@@ -38,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ArCoreController arCoreController;
 
   _onArCoreViewCreated(ArCoreController _arCoreController) {
+    print("Here!!");
     arCoreController = _arCoreController;
     _addSphere(arCoreController);
   }
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
     final sphere = ArCoreSphere(
       materials: [material],
-      radius: 0.2,
+      radius: 10.2,
     );
     final node = ArCoreNode(
       shape: sphere,
@@ -65,9 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print("Within Build");
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
+        title: Text('My app'),
       ),
       body: ArCoreView(
         onArCoreViewCreated: _onArCoreViewCreated,
