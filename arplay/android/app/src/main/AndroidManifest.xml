@@ -3,10 +3,11 @@
     <uses-sdk android:minSdkVersion="24"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera.ar" />
-    <meta-data android:name="com.google.ar.core" android:value="required" />
+    
    <application
         android:label="arplay"
         android:icon="@mipmap/ic_launcher">
+        <!-- <meta-data android:name="com.google.ar.core" android:value="optional"/> -->
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
